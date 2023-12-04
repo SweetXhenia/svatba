@@ -1,0 +1,41 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  /* globální reset aby se začalo od nuly */
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  backface-visibility: hidden;
+  scroll-behavior: smooth;
+  position: relative; }
+
+#welcome {
+  height: 100vh;
+  width: 100vw;
+  position: relative; }
+  #welcome #louka {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.3;
+    object-fit: cover; }
+  #welcome .text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center; }
+    #welcome .text .nadpis {
+      font-family: "Ephesis", cursive;
+      font-size: 20rem;
+      color: #d1c12f; }
+    #welcome .text .datum {
+      font-size: 10rem;
+      font-family: "Ephesis", cursive;
+      color: #d1c12f;
+      letter-spacing: 2rem; }

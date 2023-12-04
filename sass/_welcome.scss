@@ -1,0 +1,29 @@
+#welcome {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  #louka {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.3;
+    object-fit: cover;
+  }
+  .text {
+    //position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    .nadpis {
+      font-family: "Ephesis", cursive;
+      font-size: 20rem;
+      color: rgb(209, 193, 47);
+    }
+    .datum {
+      font-size: 10rem;
+      font-family: "Ephesis", cursive;
+      color: rgb(209, 193, 47);
+      letter-spacing: 2rem;
+    }
+  }
+}
