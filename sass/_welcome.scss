@@ -3,26 +3,32 @@
   width: 100vw;
   position: relative;
   #louka {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    opacity: 0.3;
+    opacity: 0.5;
     object-fit: cover;
+    z-index: -1;
   }
   .text {
-    //position: absolute;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     align-items: center;
+    justify-content: space-around;
+    height: 100%;
     .nadpis {
       font-family: "Ephesis", cursive;
       font-size: 20rem;
-      color: rgb(209, 193, 47);
+      color: rgb(0, 0, 0);
     }
     .datum {
+     
       font-size: 10rem;
       font-family: "Ephesis", cursive;
-      color: rgb(209, 193, 47);
+      color: rgb(0, 0, 0);
       letter-spacing: 2rem;
     }
   }
