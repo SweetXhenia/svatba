@@ -99,7 +99,7 @@ html {
   left: 3rem;
   border: 2px solid black;
   border-radius: 50%;
-  animation: pulse 1s infinite;
+  animation: pulse 2s infinite;
   background-color: rgba(141, 141, 135, 0.527); }
   .icon__nota {
     width: 4rem;
@@ -193,3 +193,50 @@ html {
       font-size: 2rem;
       font-family: "Montserrat", sans-serif;
       font-weight: 400; }
+
+.engage {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: row; }
+  .engage__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+    object-fit: cover;
+    z-index: -1; }
+  .engage__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 5rem;
+    background-color: rgba(191, 191, 187, 0.671); }
+    .engage__text--heading {
+      font-family: "Ephesis", cursive;
+      font-size: 10rem; }
+    .engage__text--story {
+      text-align: justify;
+      letter-spacing: 3px;
+      font-size: 2rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      width: 80%; }
+  .engage__photo {
+    width: 50%;
+    display: flex;
+    flex-direction: column; }
+    .engage__photo--1 {
+      height: 10rem;
+      width: auto; }
+    .engage__photo--2 {
+      height: 10rem;
+      width: auto; }
+    .engage__photo--3 {
+      height: auto;
+      width: 10rem; }

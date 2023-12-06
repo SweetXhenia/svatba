@@ -1,16 +1,7 @@
 #welcome {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
+  @include section-setup;
   #louka {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0.5;
-    object-fit: cover;
-    z-index: -1;
+    @include background-foto;
   }
   .text {
     display: flex;
@@ -78,7 +69,7 @@
   left: 3rem;
   border: 2px solid black; 
   border-radius: 50%;
-  animation: pulse 1s infinite;
+  animation: pulse 2s infinite;
   background-color: rgba(141, 141, 135, 0.527);
   &__nota{
     width: 4rem;

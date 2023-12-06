@@ -1,0 +1,47 @@
+.engage {
+  @include section-setup;
+  display: flex;
+  flex-direction: row;
+  &__background {
+    @include background-foto;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 5rem;
+    background-color: rgba(191, 191, 187, 0.671);
+
+    &--heading {
+      font-family: "Ephesis", cursive;
+      font-size: 10rem;
+    }
+    &--story {
+      text-align: justify;
+      letter-spacing: 3px;
+      font-size: 2rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      width: 80%;
+    }
+  }
+  &__photo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    &--1{
+        height: 10rem;
+        width: auto;
+    }
+    &--2{
+        height: 10rem;
+        width: auto;
+    }
+    &--3{
+        height: auto;
+        width: 10rem;
+    }
+  }
+}
