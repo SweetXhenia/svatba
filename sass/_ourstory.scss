@@ -7,9 +7,10 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  background-color: rgb(245, 229, 211);
+  background-color: rgb(227, 218, 214);
+  padding-top: 2rem;
   &__photo {
-    margin-top: 1rem;
+    
     display: grid;
     height: 100%;
     width: 50%;
@@ -34,6 +35,8 @@
     &--2 {
       height: 45rem;
       opacity: 1;
+      border-radius: 7px;
+      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
       &:hover{
         opacity: 0.6;
       }
@@ -41,6 +44,8 @@
     &--3 {
       width: 50rem;
       opacity: 1;
+      border-radius: 7px;
+      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
       &:hover{
         opacity: 0.6;
       }
@@ -84,7 +89,7 @@
     align-items: center;
     &--heading {
       margin-top: 3rem;
-      font-size: 10rem;
+      font-size: 13rem;  
       font-family: "Ephesis", cursive;
     }
     &--text {
