@@ -286,6 +286,7 @@ html {
   padding: 3rem 3rem 0; }
   .engage2__photo {
     width: 50%;
+    height: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -309,7 +310,8 @@ html {
       font-size: 10rem; }
     .engage2__text--story {
       text-align: justify;
-      letter-spacing: 3px;
+      letter-spacing: 1px;
+      line-height: 3.5rem;
       font-size: 2rem;
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
