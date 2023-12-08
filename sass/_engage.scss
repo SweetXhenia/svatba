@@ -40,16 +40,19 @@
     }
     &--1 {
       @include interactive-pic;
+      transform-origin: top right;
       height: 20rem;
     }
 
     &--2 {
       @include interactive-pic;
+      transform-origin: right;
       height: 20rem;
     }
 
     &--3 {
       @include interactive-pic;
+      transform-origin: bottom right;
       width: 20rem;
     }
   }

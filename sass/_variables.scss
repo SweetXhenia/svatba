@@ -6,7 +6,9 @@ $primary-color-light2-opacity: rgba(229, 231, 232, 0.459);
 $primary-color-light3: rgb(227, 218, 214);
 $secondary-color-light: rgb(141, 141, 135);
 
-$background-text:rgba(191, 191, 187, 0.671);
+$coundown-background-color: #92753e;
+
+$background-text: rgba(191, 191, 187, 0.671);
 
 $shadow-pic: -5px 5px 5px rgba(0, 0, 0, 0.5);
 
@@ -35,12 +37,12 @@ $shadow-pic: -5px 5px 5px rgba(0, 0, 0, 0.5);
   gap: 3rem;
 }
 
-@mixin grid-by-3 {
-  display: grid; 
-  grid-template-columns: repeat(6, 1fr);  
-  grid-template-rows: repeat(1, 50%);  
+@mixin grid-rows-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 270px);
   gap: 3rem;
-} 
+}
 
 @mixin pic-in-grid {
   width: 100%;
@@ -53,6 +55,7 @@ $shadow-pic: -5px 5px 5px rgba(0, 0, 0, 0.5);
   font-family: "Ephesis", cursive;
   color: $black-color;
   font-weight: 100;
+  text-align: center;
 }
 
 @mixin story-text {
@@ -63,16 +66,15 @@ $shadow-pic: -5px 5px 5px rgba(0, 0, 0, 0.5);
   font-size: 2rem;
 }
 
-@mixin interactive-pic{
+@mixin interactive-pic {
   width: fit-content;
-      border-radius: 7px;
-      animation: pulse 5s infinite;
-      &:active {
-        animation: 3s linear;
-        transform: scale(3) translateX(-15rem) translateY(0rem);
-      }
-}
+  border-radius: 7px;
+  transition: all 0.15s ease-in-out;
 
+  &:hover {
+    transform: scale(3);
+  }
+}
 
 //!! A N I M A C E
 

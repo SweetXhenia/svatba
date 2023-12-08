@@ -9,6 +9,7 @@
   &__page {
     display: flex;
     flex-direction: column;
+    background-color: $primary-color-light2-opacity;
   }
 
   &__text {
@@ -17,9 +18,6 @@
     align-items: center;
     width: 100%;
     padding: 3rem;
-   background-color: $primary-color-light2-opacity;
-  
-    
 
     &--heading {
       @include heading;
@@ -28,7 +26,7 @@
 
     &--story {
       @include story-text;
-      padding: 7rem;
+      padding: 0 7rem;
       display: flex;
       flex-direction: row;
 
@@ -38,11 +36,13 @@
       }
     }
   }
+
   &__photo {
-    @include grid-by-3;
+    @include grid-rows-6;
 
     &--pic {
       @include pic-in-grid;
+      box-shadow: $shadow-pic;
     }
   }
 }

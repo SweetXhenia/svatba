@@ -12,9 +12,13 @@ html {
   font-size: 62.5%;
   backface-visibility: hidden;
   scroll-behavior: smooth;
+}
+
+body {
   position: relative;
 }
-.container{
+
+.container {
   max-width: 75vw;
   margin: 0 auto;
 }

@@ -8,10 +8,11 @@
   padding: 6rem;
 
   &__photo {
-   @include grid-by-six;
+    @include grid-by-six;
 
     &--pic {
-     @include pic-in-grid;
+      @include pic-in-grid;
+      box-shadow: $shadow-pic;
     }
   }
 
@@ -28,7 +29,7 @@
     }
 
     &--story {
-     @include story-text;
+      @include story-text;
     }
   }
 }

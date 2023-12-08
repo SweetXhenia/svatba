@@ -1,0 +1,24 @@
+.countdown {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  background-color: $coundown-background-color;
+  border-radius: 30px;
+  z-index: 10;
+
+  svg {
+    fill: $primary-color-light;
+  }
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: $primary-color-light;
+    padding: 1rem;
+    margin-left: 1rem;
+  }
+}

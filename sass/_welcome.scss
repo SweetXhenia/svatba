@@ -12,58 +12,9 @@
     align-items: center;
     justify-content: space-around;
     height: 100%;
-
-    .nadpis {
-      @include heading;
-      font-size: 20rem;
-    }
-
-    .datum {
-      @include heading;
-      font-size: 2.8rem;
-      letter-spacing: 3px;
-      text-align: center;
-      width: 30rem;
-    }
   }
 }
 
-.datum__circle {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
-  z-index: 25;
-}
-
-.datum__circle::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  background-color: $primary-color-light;
-  opacity: 0.6;
-  animation: pulse 3s infinite;
-}
-.datum__circle::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  background-color: $primary-color-light2;
-  opacity: 0.7;
-}
 .icon {
   z-index: 3;
   position: fixed;
@@ -78,5 +29,55 @@
   &__nota {
     width: 4rem;
     height: 4rem;
+  }
+}
+
+.nadpis {
+  @include heading;
+  font-size: 20rem;
+}
+
+.datum__circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  z-index: 25;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: $primary-color-light;
+    opacity: 0.6;
+    animation: pulse 3s infinite;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: $primary-color-light2;
+    opacity: 0.7;
+  }
+
+  .datum {
+    @include heading;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    text-align: center;
+    width: 30rem;
   }
 }

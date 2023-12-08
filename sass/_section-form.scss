@@ -1,0 +1,26 @@
+.section-form {
+  @include section-setup;
+
+  &__image {
+    @include background-foto;
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+
+    a,
+    a:link,
+    a:visited,
+    a:focus,
+    a:hover {
+      color: black;
+      font-size: 5rem;
+      text-decoration-thickness: 2px;
+    }
+  }
+}
