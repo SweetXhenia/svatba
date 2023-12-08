@@ -1,3 +1,80 @@
+//* B A R V Y
+$black-color: rgb(0, 0, 0);
+$primary-color-light: rgb(188, 174, 162);
+$primary-color-light2: rgb(229, 231, 232);
+$primary-color-light3: rgb(227, 218, 214);
+$secondary-color-light: rgb(141, 141, 135);
+
+$background-text:rgba(191, 191, 187, 0.671);
+
+$shadow-pic: -5px 5px 5px rgba(0, 0, 0, 0.5);
+
+//? M I X I N S
+@mixin background-foto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@mixin section-setup {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+@mixin grid-by-six {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, calc(100vh / 2 - 7.5rem));
+  gap: 3rem;
+}
+
+@mixin grid-by-3 {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);  
+  grid-template-rows: repeat(1, 50%);  
+  gap: 3rem;
+} 
+
+@mixin pic-in-grid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+@mixin heading {
+  font-family: "Ephesis", cursive;
+  color: $black-color;
+  font-weight: 100;
+}
+
+@mixin story-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: justify;
+  font-size: 2rem;
+}
+
+@mixin interactive-pic{
+  width: fit-content;
+      border-radius: 7px;
+      animation: pulse 5s infinite;
+      &:active {
+        animation: 3s linear;
+        transform: scale(3) translateX(-15rem) translateY(0rem);
+      }
+}
+
+
+//!! A N I M A C E
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -9,6 +86,7 @@
     transform: scale(1);
   }
 }
+
 @keyframes focus {
   0% {
     transform: scale(1);
@@ -19,20 +97,4 @@
   100% {
     transform: scale(1);
   }
-}
-
-@mixin background-foto {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.5;
-  object-fit: cover;
-  z-index: -1;
-}
-@mixin section-setup {
-  height: 100vh;
-  width: 100%;
-  position: relative;
 }

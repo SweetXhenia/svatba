@@ -1,0 +1,38 @@
+.engage3 {
+  @include section-setup;
+padding: 3rem;
+
+&__background{
+    @include background-foto;
+}
+
+  &__page {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 3rem;
+
+    &--heading {
+        @include heading;
+      font-size: 10rem;
+    }
+
+    &--story{
+        @include story-text;
+        padding: 7rem
+    }
+  }
+  &__photo {
+    @include grid-by-3;
+
+    &--pic {
+      @include pic-in-grid;
+    }
+  }
+}

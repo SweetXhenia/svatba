@@ -4,20 +4,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8rem;
-  background-color: rgb(227, 218, 214);
+  background-color: $primary-color-light3;
   padding: 6rem;
 
   &__photo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, calc(100vh / 2 - 7.5rem));
-    gap: 3rem;
+   @include grid-by-six;
 
     &--pic {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 7px;
+     @include pic-in-grid;
     }
   }
 
@@ -29,17 +23,12 @@
     gap: 5rem;
 
     &--heading {
-      font-family: "Ephesis", cursive;
+      @include heading;
       font-size: 10rem;
     }
 
     &--story {
-      text-align: justify;
-      letter-spacing: 1px;
-      line-height: 3.5rem;
-      font-size: 2rem;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 400;
+     @include story-text;
     }
   }
 }

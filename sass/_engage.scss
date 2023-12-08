@@ -2,9 +2,11 @@
   @include section-setup;
   display: flex;
   flex-direction: row;
+
   &__background {
     @include background-foto;
   }
+
   &__text {
     display: flex;
     flex-direction: column;
@@ -12,19 +14,15 @@
     align-items: center;
     width: 50%;
     gap: 5rem;
-    background-color: rgba(191, 191, 187, 0.671);
+    background-color: $background-text;
 
     &--heading {
-      font-family: "Ephesis", cursive;
+      @include heading;
       font-size: 10rem;
     }
     &--story {
-      text-align: justify;
-      letter-spacing: 3px;
-      font-size: 2rem;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 400;
-      width: 80%;
+      @include story-text;
+      padding: 10rem;
     }
   }
   &__photo {
@@ -41,37 +39,18 @@
       align-items: flex-end;
     }
     &--1 {
+      @include interactive-pic;
       height: 20rem;
-      width: fit-content;
-      border-radius: 7px;
-      animation: pulse 5s infinite;
-      &:active {
-        animation: none;
-        transform: scale(3) translateX(-15rem) translateY(10rem);
-      }
     }
 
     &--2 {
+      @include interactive-pic;
       height: 20rem;
-      width: fit-content; 
-      border-radius: 7px;
-      animation: pulse 5s infinite;
-      &:active {
-        animation: 3s linear;
-        transform: scale(3) translateX(-15rem) translateY(0rem);
-      }
     }
 
     &--3 {
-      height: fit-content;
+      @include interactive-pic;
       width: 20rem;
-      border-radius: 7px;
-      animation: pulse 5s infinite;
-      &:active {
-
-        animation: none;
-        transform: scale(3) translateX(-13rem) translateY(-7rem);
-      }
     }
   }
 }
