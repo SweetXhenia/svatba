@@ -1,36 +1,38 @@
 .engage2 {
   @include section-setup;
-  display: flex;
-  flex-direction: row;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8rem;
   background-color: rgb(227, 218, 214);
-  padding: 3rem 3rem 0;
+  padding: 6rem;
+
   &__photo {
-    width: 50%;
-    height: 80%; 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    align-items: center;
-    row-gap: -2rem;
-    column-gap: 3rem;
+    grid-template-rows: repeat(2, calc(100vh / 2 - 7.5rem));
+    gap: 3rem;
+
     &--pic {
       width: 100%;
-      height: 80%; 
+      height: 100%;
       object-fit: cover;
       border-radius: 7px;
     }
   }
+
   &__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
     gap: 5rem;
+
     &--heading {
       font-family: "Ephesis", cursive;
       font-size: 10rem;
     }
+
     &--story {
       text-align: justify;
       letter-spacing: 1px;
@@ -38,7 +40,6 @@
       font-size: 2rem;
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
-      width: 80%;
     }
   }
 }

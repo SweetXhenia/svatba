@@ -118,83 +118,66 @@ html {
     height: 4rem; }
 
 .ourstory {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100vh;
   width: 100%;
   position: relative;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: #e3dad6;
-  padding-top: 4rem; }
+  padding: 4rem; }
   .ourstory__photo {
     display: grid;
-    height: 100%;
-    width: 50%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-    align-items: start;
-    justify-items: center;
-    position: relative;
-    z-index: 0;
-    /*    &--text {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, calc(100vh / 2 - 6rem));
+    gap: 3rem;
+    position: relative; }
+    .ourstory__photo--box {
+      position: relative; }
+    .ourstory__photo div:first-child {
+      grid-area: 1 / 1 / 2 / 2; }
+    .ourstory__photo div:nth-child(2) {
+      grid-area: 1 / 2 / 2 / 3; }
+    .ourstory__photo div:nth-child(3) {
+      grid-area: 1 / 3 / 2 / 4; }
+    .ourstory__photo div:last-child {
+      grid-area: 2 / 1 / 3 / 4; }
+    .ourstory__photo--1, .ourstory__photo--2, .ourstory__photo--3 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+      border-radius: 7px;
+      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5); }
+    .ourstory__photo--4 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+      border-radius: 7px;
+      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5); }
+    .ourstory__photo--text {
       display: flex;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      inset: 0;
       justify-content: center;
       align-items: center;
       font-family: "Montserrat", sans-serif;
-      letter-spacing: 1.5px;
-      text-align: center;
-      font-size: 100;
       font-size: 1.2rem;
+      font-weight: 400;
+      text-align: center;
+      border-radius: 7px;
       opacity: 0;
-      background-color: aquamarine;
+      background-color: #e3dad6;
       z-index: 3;
-      transition: opacity 0.3s ease-in-out;
-      &:hover {
-        opacity: 2;
-      }
-    } */ }
-    .ourstory__photo :first-child {
-      grid-area: 1 / 1 / 2 / 2; }
-    .ourstory__photo :nth-child(2) {
-      grid-area: 1 / 2 / 2 / 3; }
-    .ourstory__photo :last-child {
-      grid-area: 2 / 1 / 3 / 3; }
-    .ourstory__photo--1, .ourstory__photo--2 {
-      height: 45rem;
-      opacity: 1;
-      border-radius: 7px;
-      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5); }
-      .ourstory__photo--1:hover, .ourstory__photo--2:hover {
-        opacity: 0.6; }
-    .ourstory__photo--3 {
-      width: 50rem;
-      opacity: 1;
-      border-radius: 7px;
-      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5); }
-      .ourstory__photo--3:hover {
-        opacity: 0.6; }
-    .ourstory__photo--box {
-      position: relative;
-      opacity: 1;
       transition: opacity 0.3s ease-in-out; }
-      .ourstory__photo--box:hover {
-        opacity: 0.6; }
+      .ourstory__photo--box:hover .ourstory__photo--text {
+        opacity: 0.8; }
   .ourstory__textbox {
-    height: 100%;
-    width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem; }
+    gap: 2rem;
+    padding: 0 8rem; }
     .ourstory__textbox--heading {
       margin-top: 3rem;
       font-size: 13rem;
@@ -280,22 +263,19 @@ html {
   height: 100vh;
   width: 100%;
   position: relative;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8rem;
   background-color: #e3dad6;
-  padding: 3rem 3rem 0; }
+  padding: 6rem; }
   .engage2__photo {
-    width: 50%;
-    height: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    align-items: center;
-    row-gap: -2rem;
-    column-gap: 3rem; }
+    grid-template-rows: repeat(2, calc(100vh / 2 - 7.5rem));
+    gap: 3rem; }
     .engage2__photo--pic {
       width: 100%;
-      height: 80%;
+      height: 100%;
       object-fit: cover;
       border-radius: 7px; }
   .engage2__text {
@@ -303,7 +283,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
     gap: 5rem; }
     .engage2__text--heading {
       font-family: "Ephesis", cursive;
@@ -314,5 +293,4 @@ html {
       line-height: 3.5rem;
       font-size: 2rem;
       font-family: "Montserrat", sans-serif;
-      font-weight: 400;
-      width: 80%; }
+      font-weight: 400; }
