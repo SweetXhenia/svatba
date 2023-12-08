@@ -1,14 +1,14 @@
 .engage3 {
   @include section-setup;
-padding: 3rem;
+  padding: 3rem;
 
-&__background{
+  &__background {
     @include background-foto;
-}
+  }
 
   &__page {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   &__text {
@@ -17,15 +17,25 @@ padding: 3rem;
     align-items: center;
     width: 100%;
     padding: 3rem;
+   background-color: $primary-color-light2-opacity;
+  
+    
 
     &--heading {
-        @include heading;
+      @include heading;
       font-size: 10rem;
     }
 
-    &--story{
-        @include story-text;
-        padding: 7rem
+    &--story {
+      @include story-text;
+      padding: 7rem;
+      display: flex;
+      flex-direction: row;
+
+      p {
+        width: 50%;
+        padding: 4rem;
+      }
     }
   }
   &__photo {

@@ -2,6 +2,7 @@
 $black-color: rgb(0, 0, 0);
 $primary-color-light: rgb(188, 174, 162);
 $primary-color-light2: rgb(229, 231, 232);
+$primary-color-light2-opacity: rgba(229, 231, 232, 0.459);
 $primary-color-light3: rgb(227, 218, 214);
 $secondary-color-light: rgb(141, 141, 135);
 
@@ -36,7 +37,7 @@ $shadow-pic: -5px 5px 5px rgba(0, 0, 0, 0.5);
 
 @mixin grid-by-3 {
   display: grid; 
-  grid-template-columns: repeat(3, 1fr);  
+  grid-template-columns: repeat(6, 1fr);  
   grid-template-rows: repeat(1, 50%);  
   gap: 3rem;
 } 

@@ -318,7 +318,8 @@ html {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 3rem; }
+    padding: 3rem;
+    background-color: rgba(229, 231, 232, 0.459); }
     .engage3__text--heading {
       font-family: "Ephesis", cursive;
       color: black;
@@ -330,10 +331,15 @@ html {
       letter-spacing: 1px;
       text-align: justify;
       font-size: 2rem;
-      padding: 7rem; }
+      padding: 7rem;
+      display: flex;
+      flex-direction: row; }
+      .engage3__text--story p {
+        width: 50%;
+        padding: 4rem; }
   .engage3__photo {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(1, 50%);
     gap: 3rem; }
     .engage3__photo--pic {
