@@ -2,8 +2,16 @@
   @include section-setup;
   padding: 3rem;
 
+  @media (max-width: 1600px) {
+    height: auto;
+  }
+
   &__background {
     @include background-foto;
+
+    @media (max-width: 1600px) {
+      height: 100%;
+    }
   }
 
   &__page {
@@ -19,26 +27,61 @@
     width: 100%;
     padding: 3rem;
 
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+
     &--heading {
       @include heading;
       font-size: 10rem;
+
+      @media (max-width: 768px) {
+        font-size: 8rem;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 6rem;
+      }
     }
 
     &--story {
       @include story-text;
       padding: 0 7rem;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
+
+      @media (max-width: 576px) {
+        padding: 0;
+      }
 
       p {
         width: 50%;
         padding: 4rem;
+
+        @media (max-width: 1024px) {
+          width: 100%;
+        }
       }
     }
   }
 
   &__photo {
     @include grid-rows-6;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 300px);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-rows: repeat(2, 200px);
+    }
+
+    @media (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &--pic {
       @include pic-in-grid;

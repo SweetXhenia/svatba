@@ -5,12 +5,29 @@
   background-color: $primary-color-light3;
   padding: 4rem;
 
+  @media (max-width: 1600px) {
+    height: auto;
+  }
+
+  @media (max-width: 1366px) {
+    grid-template-columns: 1fr;
+  }
+
   &__photo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, calc(100vh / 2 - 6rem));
     gap: 3rem;
     position: relative;
+
+    @media (max-width: 1366px) {
+      order: 2;
+    }
+
+    @media (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &--box {
       position: relative;
@@ -73,10 +90,28 @@
     gap: 5rem;
     padding: 0 8rem;
 
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+
+    @media (max-width: 1366px) {
+      order: 1;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
     &--heading {
       @include heading;
       margin-top: 3rem;
       font-size: 13rem;
+
+      @media (max-width: 1024px) {
+        font-size: 8rem;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 6rem;
+      }
     }
 
     &--text {

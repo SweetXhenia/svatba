@@ -7,8 +7,29 @@
   background-color: $primary-color-light3;
   padding: 6rem;
 
+  @media (max-width: 1600px) {
+    height: auto;
+  }
+
+  @media (max-width: 1366px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 576px) {
+    padding: 4rem;
+  }
+
   &__photo {
     @include grid-by-six;
+
+    @media (max-width: 1366px) {
+      order: 2;
+    }
+
+    @media (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &--pic {
       @include pic-in-grid;
@@ -23,9 +44,21 @@
     align-items: center;
     gap: 5rem;
 
+    @media (max-width: 1366px) {
+      order: 1;
+    }
+
     &--heading {
       @include heading;
       font-size: 10rem;
+
+      @media (max-width: 768px) {
+        font-size: 8rem;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 6rem;
+      }
     }
 
     &--story {

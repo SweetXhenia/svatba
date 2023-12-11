@@ -35,6 +35,18 @@
 .nadpis {
   @include heading;
   font-size: 20rem;
+
+  @media (max-width: 1024px) {
+    font-size: 16rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 8rem;
+  }
 }
 
 .datum__circle {
@@ -46,6 +58,11 @@
   height: 30rem;
   border-radius: 50%;
   z-index: 25;
+
+  @media (max-width: 1024px) {
+    width: 25rem;
+    height: 25rem;
+  }
 
   &::after {
     content: "";
